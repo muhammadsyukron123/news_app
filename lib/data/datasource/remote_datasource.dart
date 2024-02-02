@@ -6,7 +6,7 @@ import '../model/news_model.dart';
 
 class RemoteDataSource {
   final String baseUrl = 'https://newsapi.org/v2/everything';
-  final String apiKey = '4b397c0b925c48649a61b00c6ab69622';
+  final String apiKey = '81ef520927314c8e83cc27ddd8286fa5';
 
   Future<List<NewsModel>> fetchNews(String keyword) async {
     final response = await http.get(Uri.parse('$baseUrl?q=$keyword&apiKey=$apiKey'));

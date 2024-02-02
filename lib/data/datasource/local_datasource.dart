@@ -18,10 +18,6 @@ class LocalDataSource {
     await box.add(news);
   }
 
-  // Future<List<News>> getSavedNews() async {
-  //   final box = await Hive.openBox<News>(boxName);
-  //   return box.values.toList();
-  // }
   Future<List<NewsEntity>> getSavedNews() async {
     final box = await Hive.openBox<News>(boxName);
     return box.values.map((news) => NewsEntity(
